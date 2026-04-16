@@ -2,17 +2,17 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 const ballImage = new Image();
-ballImage.src = 'picaxe.png'; 
+ballImage.src = 'images/picaxe.png'; 
 
 const paddleImg = new Image();
-paddleImg.src = 'paddle.png'; 
+paddleImg.src = 'images/paddle.png'; 
 
 const blockTypes = {
-    1: 'dirt.jpg',
-    2: 'stone.jpg',
-    3: 'deepslate.jpg',
-    4: 'obsidian.jpg',
-    5: 'bedrock.jpg'
+    1: 'images/dirt.jpg',
+    2: 'images/stone.jpg',
+    3: 'images/deepslate.jpg',
+    4: 'images/obsidian.jpg',
+    5: 'images/bedrock.jpg'
 };
 
 const brickImages = {};
@@ -385,7 +385,6 @@ class Game {
                             brick.active = false; 
 
                             if (Math.random() < 0.15) { 
-                                // --- POWER UP COLORS MATCH THE ORANGE/WHITE THEME ---
                                 const cards = [
                                     { type: "MULTI_BALL", color: "#ffaa00", speed: 1.2 }, 
                                     { type: "EXPAND", color: "#ffffff", speed: 1.2 }       
@@ -466,7 +465,7 @@ class Game {
     }
 
     draw(ctx) {
-        ctx.fillStyle = "#BFB7E1"; 
+        ctx.fillStyle = "#87CEEB"; 
         ctx.fillRect(0, 0, this.width, this.height);
 
         this.paddle.draw(ctx);
@@ -479,7 +478,7 @@ class Game {
             ctx.fillRect(0, 0, this.width, this.height);
 
             ctx.font = "bold 40px 'Courier New'";
-            ctx.fillStyle = "#ffaa00"; // --- NOW ORANGE ---
+            ctx.fillStyle = "#ffaa00"; 
             ctx.textAlign = "center";
             ctx.fillText("PAUSED", this.width / 2, this.height / 2);
         }
@@ -489,7 +488,7 @@ class Game {
             ctx.fillRect(0, 0, this.width, this.height);
 
             ctx.font = "bold 50px 'Courier New'";
-            ctx.fillStyle = "#ffaa00"; // --- NOW ORANGE ---
+            ctx.fillStyle = "#ffaa00"; 
             ctx.textAlign = "center";
             ctx.fillText("GAME OVER", this.width / 2, this.height / 2 - 20);
             
@@ -503,7 +502,7 @@ class Game {
             ctx.fillRect(0, 0, this.width, this.height);
 
             ctx.font = "bold 50px 'Courier New'";
-            ctx.fillStyle = "#ffaa00"; // --- NOW ORANGE ---
+            ctx.fillStyle = "#ffaa00"; 
             ctx.textAlign = "center";
             ctx.fillText("VICTORY!", this.width / 2, this.height / 2 - 20);
             

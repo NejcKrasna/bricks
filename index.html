@@ -7,32 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="mainLayout">
-        
         <h1 id="mainTitle">MineBrick</h1>
-        
         <div id="centerColumn">
-            
             <div id="gameContainer">
                 <canvas id="gameCanvas" width="800" height="600"></canvas>
-                
                 <div id="startMenu">
                     <h1 id="titleText">MineBrick</h1>
-                    
                     <input type="text" id="playerNameInput" placeholder="Enter Player Name..." maxlength="12" autocomplete="off">
-                    
                     <div id="difficultyButtons">
                         <button id="btnEasy">EASY</button>
                         <button id="btnMedium">MEDIUM</button>
                         <button id="btnHard">HARD</button>
                     </div>
-
                     <button id="btnGuide">GUIDE & CREDITS</button>
-                    
                     <p id="startPrompt" style="display: none;">Press LEFT or RIGHT arrow to start...</p>
                 </div>
-
                 <div id="guideOverlay" style="display: none;">
                     <h2>HOW TO PLAY</h2>
                     <p>Use the <strong>LEFT</strong> and <strong>RIGHT</strong> arrow keys to move the paddle.</p>
@@ -44,33 +34,26 @@
                         <li><strong>Stone:</strong> 2 hits</li>
                         <li><strong>Dirt:</strong> 1 hit (Drops Power-Ups!)</li>
                     </ul>
-                    
                     <p>Catch falling power-ups!</p>
                     <ul style="text-align: left; line-height: 1.8; margin-top: 0;">
                         <li><strong style="color: #ffaa00;">Orange Card:</strong> Multi-Picaxe</li>
                         <li><strong style="color: #ffffff;">White Card:</strong> Paddle Expansion</li>
                     </ul>
-                    
                     <h3 style="color: #ffaa00; margin-top: 15px;">CREDITS</h3>
                     <p style="font-weight: bold; font-size: 20px;">Creator: Nejc Krašna, 4.RA</p>
-                    
                     <button id="btnCloseGuide" style="margin-top: 15px;">BACK TO MENU</button>
                 </div>
             </div>
         </div>
-
         <div id="rightColumn">
-            
             <div class="uiPanel">
                 <h3>SCORE</h3>
                 <p id="scoreDisplay">0</p>
             </div>
-            
             <div class="uiPanel">
                 <h3>TIME</h3>
                 <p id="timeDisplay">00:00</p>
             </div>
-
             <div class="uiPanel" id="leaderboardPanel">
                 <h3 id="leaderboardTitle">LEADERBOARD</h3>
                 <ol id="leaderboardList">
@@ -78,13 +61,9 @@
                     <li>to view records!</li>
                 </ol>
             </div>
-
             <button id="btnPause" style="display: none;">PAUSE</button>
-
         </div>
-
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
